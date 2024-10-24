@@ -1,0 +1,148 @@
+body{
+  font-size: 16px;
+  line-height: 1.2;
+}
+P{
+  line-height: 1;
+}
+.profile_image{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+img:hover{
+    /* background-color: rgb(50, 163, 255); */
+  box-shadow: 2px 3px 15px rgb(14, 47, 74);
+  transition: box-shadow 0.3s;
+}
+
+img{
+
+  width: 30%;
+  /* height: 30%; */
+  /* clip-path: circle(50% at 50% 50%); */
+  border-radius: 10%;
+}
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .main_div {
+    background-color: #FAF9F6;
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+  }
+  .mainHead1{
+    letter-spacing: 4px;
+
+    /* background-color: rgb(50, 163, 255); */
+    /* color:white; */
+    padding: 10px;
+    text-align: center;
+  }
+
+  .mainHead{
+    letter-spacing: 4px;
+    border-radius: 4px;
+    background-color: rgb(50, 163, 255);
+    color:white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Adjust width for smaller screens */
+  @media screen and (min-width: 390px) {
+    .main_div {
+      width: 80%;
+    }
+  }
+
+  /* Wrapper for grid items */
+  .wraper_div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns on large screens */
+    gap: 20px;
+  }
+
+  .grid-item {
+    border-radius: 4px;
+
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: left;
+  }
+
+  /* .icon {
+    width: 60px;
+    background-color: white;
+    mix-blend-mode: multiply;
+    border-radius: 100%;
+    
+    box-shadow: 2px 1px 10px rgb(115, 115, 115);
+    margin-bottom: 10px;
+  } */
+
+  h2 {
+    border-radius: 4px;
+
+    letter-spacing: 4px;
+    background-color: rgb(50, 163, 255);
+    color:white;
+    padding: 6px;
+  }
+
+
+  @media screen and (max-width: 1024px) {
+    .wraper_div {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .grid-item {
+      padding: 15px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .wraper_div {
+      grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+
+    .grid-item {
+      padding: 10px;
+    }
+
+    .icon {
+      width: 50px; /* Adjust icon size on smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .main_div {
+      width: 90%;
+    }
+
+    h2 {
+      letter-spacing: 2px; /* Reduce letter-spacing for small screens */
+    }
+
+    .icon {
+      width: 40px; /* Further reduce icon size */
+    }
+
+    .grid-item {
+      padding: 8px;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+    p{
+        
+      }
+    
+}
