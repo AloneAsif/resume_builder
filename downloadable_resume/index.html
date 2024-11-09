@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="roboto-regular">
+    <main class="main_div">
+      <!-- Form Section -->
+      <form id="resume_form" class="resume-form">
+        <fieldset>
+          <label for="role">Role:</label>
+          <input
+            type="text"
+            id="role"
+            placeholder="Enter your role like Graphic designer or other."
+            required
+          />
+
+          <label for="profile">Profile:</label>
+          <textarea type="text" id="profile" rows="2"></textarea>
+
+          <label for="profile_picture">Profile Picture</label>
+          <input id="profile_picture" type="file" accept="image/*" />
+
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" placeholder="enter your name" id="name" required />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="enter your email"
+          />
+
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="enter your phone number"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Education</legend>
+          <label for="education">Education</label>
+          <textarea id="education" rows="3"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Experience</legend>
+          <label for="experience">Experience</label>
+          <textarea
+            id="experience"
+            placeholder="Separate each experience with a comma for display."
+            rows="3"
+            required
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Skills</legend>
+          <label for="skills">Skills</label>
+          <textarea
+            id="skills"
+            rows="3"
+            placeholder="Separate each skill with a comma for display."
+            required
+          ></textarea>
+        </fieldset>
+
+        <button type="submit">Generate Resume</button>
+      </form>
+
+      <!-- Resume Display Section -->
+      <h1 id="display_name" class="mainHead1" contenteditable="true">
+        MUHAMMAD ASIF
+      </h1>
+      <h2 id="display_role" class="mainHead" contenteditable="true">
+        Web Developer / Graphic Designer
+      </h2>
+      <div class="wraper_div">
+        <div class="grid-item">
+          <div class="profile_image">
+            <img
+              id="display_profile_picture"
+              src="profile_image/94968565324.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <h2>PROFILE</h2>
+            <p id="display_profile_text" contenteditable="true">
+              My name is Muhammad Asif, I am a graphic designer and web
+              developer.
+            </p>
+          </div>
+          <div>
+            <h2>CONTACT</h2>
+            <p id="display_phone" contenteditable="true">03102648581</p>
+            <p id="display_email" contenteditable="true">
+              asifkhadimaplha@gmail.com
+            </p>
+          </div>
+          <div>
+            <h2>SKILLS</h2>
+            <ul id="display_skills" contenteditable="true">
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Html/Css/Javascript/Typescript</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div>
+            <h2>EDUCATION</h2>
+            <p id="display_education" contenteditable="true">
+              Global educational secondary school
+            </p>
+          </div>
+          <div>
+            <h2>EXPERIENCE</h2>
+            <ul id="display_experience" contenteditable="true">
+              <li>
+                Designed engaging social media content to enhance brand
+                presence.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder for Shareable Link and Download Button -->
+      <div id="shareable_link" class="shareable-link"></div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
